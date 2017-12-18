@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!--must have this in html5 -->
+<html>
+
+<head>
+	<link rel="stylesheet" href="more.css" type="text/css">
+		<!--stylesheet is a part of the code, without it size.css will have no affect -->
+	<title>Michael Zeng</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+
+<div class="d1">
+<img class="Slides" src="images/college.jpg">
+<img class="Slides" src="images/ma.jpg">
+<img class="Slides" src="images/ged.jpg">
+<img class="Slides" src="images/tech.png">
+<img class="Slides" src="images/mar.png">
+
+
+<!--click on the last image should open a link -->
+
+</div>
+
+<button class="left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="right" onclick="plusDivs(+1)">&#10095;</button>
+
+ <script type="text/javascript">
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    function plusDivs(n) 
+    {
+    showDivs(slideIndex += n);
+    }
+    function showDivs(n) 
+    {
+        var i;
+        var x = document.getElementsByClassName("Slides");
+        if (n > x.length) {slideIndex = 1} 
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) 
+        {
+        x[i].style.display = "none"; 
+        }
+        x[slideIndex-1].style.display = "block"; 
+    }
+</script>
+</body>
+</html>
+
+    <!--JavaScript Explained
+First, set the slideIndex to 1. (First picture)
+
+Then call showDivs() to display the first image.
+
+When the user clicks one of the buttons call plusDivs().
+
+The plusDivs() function subtracts one or  adds one to the slideIndex.
+
+The showDiv() function hides (display="none") all elements with the class name "mySlides", and displays (display="block") the element with the given slideIndex.
+
+If the slideIndex is higher than the number of elements (x.length), the slideIndex is set to zero.
+
+If the slideIndex is less than 1 it is set to number of elements (x.length).
+-->

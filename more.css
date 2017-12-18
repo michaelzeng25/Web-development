@@ -1,0 +1,25 @@
+body{
+    background-color:black;
+}
+.d1 img{
+    width:45vw;
+    height:35vw;
+    position: relative;/*stay in the center--begin*/
+	transform:translate(-50%, -50%);
+  	left: 50%;/*---end*/
+    margin-top:25%;
+}
+.left{
+    margin-top:-40%;
+    float:left;
+    margin-left:24%;
+}
+.right{
+    margin-top:-40%;
+    float:right;
+    margin-right:24%;
+}
+header a{
+	font-size:2vw;
+	color:gold;
+}
